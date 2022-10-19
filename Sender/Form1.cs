@@ -58,5 +58,10 @@ namespace Sender
             stran.Commit();
 
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsNumber(e.KeyChar);
+        }
     }
 }
